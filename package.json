@@ -1,0 +1,62 @@
+{
+  "name": "siks-scraper-app",
+  "version": "1.0.0",
+  "description": "Aplikasi desktop lintas platform untuk scraping dan manajemen data SIKS-NG",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test tests/*.test.js",
+    "smoke": "electron tests/smoke.electron.js",
+    "smoke:runtime": "electron tests/smoke.electron.runtime.js",
+    "smoke:webview": "electron tests/smoke.webview.js",
+    "dist": "electron-builder",
+    "dist:win": "electron-builder --win",
+    "dist:mac": "electron-builder --mac",
+    "dist:linux": "electron-builder --linux"
+  },
+  "keywords": [
+    "electron",
+    "sqlite",
+    "siks"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "electron": "^35.7.5",
+    "electron-builder": "^26.18.0"
+  },
+  "build": {
+    "appId": "id.awdreams.siksscraper",
+    "productName": "SIKS Scraper",
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "category": "public.app-category.utilities"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Utility"
+    }
+  }
+}

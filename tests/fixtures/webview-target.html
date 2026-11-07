@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>Webview smoke target</title></head>
+<body>
+  <table class="MuiTable-root MuiTable-stickyHeader css-1g31k2i">
+    <tbody>
+      <tr>
+        <td><div class="MuiBox-root css-1xp8hvq" role="button">detail</div></td>
+        <td><p>3201012345678901</p></td>
+      </tr>
+    </tbody>
+  </table>
+  <div id="out">NOT_CLICKED</div>
+  <script>
+    document.querySelector('.css-1xp8hvq').addEventListener('click', function () {
+      document.getElementById('out').textContent = 'CLICKED';
+    });
+  </script>
+</body>
+</html>

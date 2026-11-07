@@ -1,0 +1,10 @@
+node_modules/
+data/
+user_data/
+release/
+dist/
+*.log
+.DS_Store
+Thumbs.db
+tests/test_siks.db
+.superpowers/
